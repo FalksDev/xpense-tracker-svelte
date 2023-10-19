@@ -1,8 +1,4 @@
 import { writable } from "svelte/store";
-
-type User = {
-    name: string;
-    email: string;
-}
+import type { User } from "@prisma/client";
 
 export const user = writable<User>();

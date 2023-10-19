@@ -74,6 +74,7 @@ enum ExpenseType {
 
 model Expense {
     id          String      @id @default(cuid())
+    label       String
     sek         Decimal
     createdWhen DateTime
     createdById String       
