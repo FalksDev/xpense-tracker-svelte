@@ -3,11 +3,15 @@
 
     export let label: string = "";
     export let styleClass: string = "";
-    
+    export let disabled: boolean = false;
+    export let type: "submit" | "button" = "button";
+
     const dispatch = createEventDispatcher();
 </script>
 
 <button
+    type={type}
+    disabled={disabled}
     on:click={() => dispatch("click")}
     class="
         p-[10px] 

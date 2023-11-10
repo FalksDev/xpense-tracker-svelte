@@ -16,5 +16,17 @@ export const handle = SvelteKitAuth({
             return crypto.randomUUID();
         }
     },
+    callbacks: {
+      async session({session, token, user}) {
+        session = {
+            ...session,
+            user: {
+                id: user.id,
+                ...session.user
+            }
+        }
+        return session
+      }
+    },
     providers: [GoogleProvider({ clientId: GOOGLE_CLIENT_ID, clientSecret: GOOGLE_CLIENT_SECRET })]
 });

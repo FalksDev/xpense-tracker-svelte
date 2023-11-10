@@ -2,6 +2,7 @@
     import "../app.postcss";
     import { page } from '$app/stores';
     import { Navbar } from '$lib/components/layout';
+    import { Toast } from "$lib/components";
     import { user } from "../lib/stores/userStore.ts";
 
     let title: string = "";
@@ -18,7 +19,7 @@
     $: {
         const initialUser = $page.data.session?.user;
         if(initialUser) {
-            user.set({ name: initialUser.name ?? "", email: initialUser.email ?? "" });
+            user.set(initialUser);
         } 
     }
 
@@ -36,4 +37,5 @@
             <slot />
         </div>
     </div>
+    <Toast />
 </div>

@@ -67,7 +67,7 @@
         {/if}
     </div>
     {#if showResponsiveMenu} 
-        <div class="pt-2 px-[10px] absolute top-[60px] text-slate-200 bg-neutral-900 w-full left-0 flex flex-col gap-1 font-medium">
+        <div class="z-50 pt-2 px-[10px] absolute top-[60px] text-slate-200 bg-neutral-900 w-full left-0 flex flex-col gap-1 font-medium">
         <a  
             on:click={() => {
                 toggleResponsiveMenu();

@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let value: string = "";
+    export let value: number;
     export let label: string = "";
 
     import { createEventDispatcher } from "svelte";
@@ -10,6 +10,5 @@
     <input
         class="outline-none w-full bg-transparent text-neutral-200 placeholder-neutral-400" 
         placeholder={label}
-        on:change={() => dispatch("change", { value })}  bind:value={value} type="text" />
+        on:change={() => dispatch("change", { value })}  bind:value={value} type="number" />
 </div>
-

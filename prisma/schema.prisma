@@ -76,6 +76,7 @@ model Expense {
     id          String      @id @default(cuid())
     label       String
     sek         Decimal
+    date        DateTime
     createdWhen DateTime
     createdById String       
     type        ExpenseType @default(OTHER)
